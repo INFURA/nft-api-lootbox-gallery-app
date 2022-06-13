@@ -1,0 +1,11 @@
+.swiper {
+  @apply h-full z-10
+}
+
+.swiper-wrapper {
+  @apply items-center overflow-visible;
+}
+
+.swiper-slide {
+  @apply items-center content-center flex;
+}

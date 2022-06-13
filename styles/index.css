@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('../public/fonts/LLAkkurat-LightWeb/css/stylesheet.css');
+  @import url('../public/fonts/LLAkkurat-RegularWeb/css/stylesheet.css');
+  @import url('../public/fonts/LLAkkuratMonoWeb/css/stylesheet.css');
+  @import url('../public/fonts/LLAkkurat-RegularOTStd/css/stylesheet.css');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    font-family: 'Lineto Akkurat Light';
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+}

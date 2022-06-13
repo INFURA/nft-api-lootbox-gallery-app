@@ -1,0 +1,11 @@
+.header {
+  @apply absolute w-full container flex justify-between items-center left-[50%] right-[50%] translate-x-[-50%] pt-8 z-30;
+}
+
+.header__logo {
+  @apply max-w-[6.6rem] ml-12 desktop:ml-0;
+}
+
+.header__profile {
+  @apply mr-12 desktop:mr-0;
+}

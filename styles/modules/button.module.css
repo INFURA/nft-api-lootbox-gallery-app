@@ -1,0 +1,3 @@
+.primary {
+  @apply text-primary uppercase leading-7 hover:text-white transition-all;
+}

@@ -1,0 +1,32 @@
+.profile {
+  @apply relative flex items-center p-2 hover:bg-slate-800 rounded-md hover:cursor-pointer;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.profile > * {
+  transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.profile:hover .profile__info {
+  @apply opacity-0;
+}
+
+.profile:hover .profile__disconnect {
+  @apply opacity-100;
+}
+
+.profile__info {
+  @apply flex items-center;
+}
+
+.profile__disconnect {
+  @apply absolute opacity-0 w-full text-red-400 left-0 text-center;
+}
+
+.profile p {
+  @apply mr-4;
+}
+
+.profile__img {
+  @apply w-[36px] h-[36px] rounded-full;
+}

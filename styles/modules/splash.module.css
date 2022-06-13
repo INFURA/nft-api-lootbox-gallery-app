@@ -1,0 +1,48 @@
+.splash__container {
+  @apply container mx-auto h-screen flex flex-col justify-center items-center animate-fadein;
+  transition: opacity 0.4s ease;
+}
+
+.splash__container_fadeout {
+  @apply opacity-0;
+}
+
+.splash__content {
+  @apply max-w-6xl flex;
+}
+
+.splash__content > * {
+  @apply w-1/2 flex flex-col justify-center items-start;
+}
+
+.splash__heading {
+  @apply text-[5rem] leading-[5rem] max-w-md;
+}
+
+.splash__description {
+  @apply mt-12;
+}
+
+.splash__btn {
+  @apply mt-12;
+}
+
+.splash__message_container {
+  @apply mt-12 animate-fadein flex justify-between items-center;
+}
+
+.splash__message_container p {
+  @apply mr-6;
+}
+
+.splash__error {
+  @apply text-red-500;
+}
+
+.splash__success {
+  @apply text-green-500;
+}
+
+.splash__nft_example {
+  @apply max-w-[150%] absolute animate-fadein delay-1000;
+}

@@ -1,0 +1,23 @@
+.nft {
+  @apply h-full bg-black animate-fadein;
+}
+
+.nft__content_wrapper {
+  @apply absolute z-10 w-full h-full flex flex-col items-center content-center justify-center;
+}
+
+.nft__content {
+  @apply m-12 w-[300px] tablet:m-0 tablet:w-[656px] h-full flex flex-col justify-center;
+}
+
+.nft__title {
+  @apply text-4xl font-light mt-6 leading-10 overflow-hidden text-ellipsis;
+}
+
+.nft__collection {
+  @apply uppercase mt-4;
+}
+
+.nft__bg {
+  @apply absolute w-full h-full z-0 blur-[200px] opacity-80 bg-no-repeat bg-center bg-cover;
+}
