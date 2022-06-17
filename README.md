@@ -12,8 +12,7 @@ A real-world use case for this project: Displaying NFT's in a collection or for 
 
 - [Next.js](https://nextjs.org/docs)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Etherscan API](https://docs.etherscan.io/)
-- [OpenSea API](https://docs.opensea.io/reference/api-overview)
+- [Infura NFT API](https://docs.api.infura.io/nft/)
 - Axios
 
 
@@ -23,13 +22,13 @@ A real-world use case for this project: Displaying NFT's in a collection or for 
 Clone the project
 
 ```bash
-  git clone https://github.com/mondorobot/consensys.nft-gallery.git
+  git clone https://github.com/INFURA/nft-api-lootbox-gallery-app.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd consensys.nft-gallery
+  cd nft-api-lootbox-gallery-app
 ```
 
 Install dependencies
@@ -44,24 +43,20 @@ Create environment variables file
   cp .env .env.local
 ```
 
-You'll need to sign up and get an etherscan.io API key:
+You'll need to sign up and get an Infura API key:
 
-  1 - [Create an Etherscan account](https://docs.etherscan.io/getting-started/creating-an-account) 
+  1 - [Create an Infura account](https://infura.io/register) 
   
-  2 - [Get an API Key](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics)
+  2 - Create a new project and add `Project ID` + `Project Secret` to `.env.local` file. 
 
-Add your API Key to the `.env.local` file
+  3 - Optionally, overwrite the `ACCOUNT_ADDRESS` variable if you want to explore available NFTs on other wallet.
+  
 ```bash
-  # .env.local
-
-  ETHERSCAN_KEY=insert-your-api-key-here
-```
-
-Add the NFT contract address that you want to authenticate users with. Note that because this project utilizes the Etherscan API the contract used to verify users must be on the __ethereum network__.
-```bash
-  # .env.local
-
-  ETHERSCAN_KEY=insert-your-api-key-here
+# .env.local
+INFURA_PROJECT_ID=
+INFURA_PROJECT_SECRET=
+# Optional account address to overwrite Metamask selected account
+ACCOUNT_ADDRESS=
 ```
 
 ### 3. Run the Project
