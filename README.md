@@ -18,7 +18,7 @@ A real-world use case for this project: Displaying NFT's in a collection or for 
 
 ## Run Locally
 
-### 1. Intallation
+### 1. Installation
 Clone the project
 
 ```bash
