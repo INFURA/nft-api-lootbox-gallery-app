@@ -45,7 +45,7 @@ Create environment variables file
 
 You'll need to sign up and get an Infura API key:
 
-  1 - [Create an Infura account](https://infura.io/) 
+  1 - [Create an Infura account](https://infura.io/register) 
   
   2 - Create a new project and add `Project ID` + `Project Secret` to `.env.local` file. 
 
