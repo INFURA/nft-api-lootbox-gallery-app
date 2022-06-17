@@ -51,10 +51,10 @@ const App = () => {
       ) : (
         <Splash
           title="Create an NFT Gallery"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                autem odio totam quibusdam nobis. Quis numquam laudantium fugiat
-                fuga ullam. Dolore neque consectetur unde magni suscipit, incidunt
-                porro dolorem id."
+          description="This project is a baseline starting point for your project. Enter your wallet address 
+          in the 'ACCOUNT_ADDRESS' field of your .env file to test out the project. After you are able to successfully
+          display your NFTs in the gallery it's your turn to extend this project. Imagine other creative use-cases for
+          this project leveraging the Infura NFT-API and build out your vision!"
           buttonText="Connect Wallet"
           handleConnect={handleConnectWallet}
           walletConnected={walletConnected}
