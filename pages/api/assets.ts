@@ -1,5 +1,6 @@
 import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { visitFunctionBody } from 'typescript';
 
 export interface Asset {
   name: string;
@@ -23,17 +24,16 @@ export default async function handler(
     return;
   }
 
-  const { accountAddress } = req.body;
+  const accountAddress = process.env.ACCOUNT_ADDRESS ? process.env.ACCOUNT_ADDRESS : req.body.accountAddress;
 
   try {
     const { data } = await axios.get(
-      `https://api.opensea.io/api/v1/assets`,
+      `https://nft.api.infura.io/networks/1/accounts/${accountAddress}/assets/nfts`,
       {
-        headers: {
-          'x-api-key': '',
-        },
-        params: {
-          owner: accountAddress,
+        headers: {},
+        auth: {
+          username: `${process.env.INFURA_PROJECT_ID}`,
+          password: `${process.env.INFURA_PROJECT_SECRET}`
         }
       }
     );

@@ -1,5 +1,6 @@
 import styles from '../styles/modules/gallery.module.css';
 
+import Image from 'next/image'
 import Modal from './Modal';
 import NFTDetail from './NFTDetail';
 import { useEffect, useState } from 'react';
@@ -18,6 +19,7 @@ const GallerySlide = ({
   active,
 }: GallerySlideProps) => {
   const [showModal, setShowModal] = useState(false);
+  const [src, setSrc] = useState(imgUrl);
 
   useEffect(() => {
     if (!active) {
@@ -43,7 +45,7 @@ const GallerySlide = ({
       onClick={handleSlideClick}
     >
       {imgUrl ? (
-        <img src={imgUrl} alt={title} />
+        <img src={src} onError={() => setSrc('/image-error.png')}   alt={title} />
       ) : (
         <div className={styles.gallery__slide__placeholder} />
       )}

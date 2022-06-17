@@ -16,7 +16,7 @@ export const useWallet = (
 
   const reset = () => {
     setTokens([]);
-    setDisplayName('');
+    setDisplayName(''); 
     setWalletConnected(false);
     setErrorMessage('');
     setSuccessMessage('');
@@ -89,19 +89,27 @@ export const useWallet = (
 
       let tokens = await getTokens(accountAddress);
 
-      if (!tokens?.length) return;
+      if (!tokens?.length) {
+        setErrorMessage(`No NFTs found. Try overwriting 'WALLET_ADDRESS' in .env.local`)
+        return;
+      }
 
-      setDisplayName(tokens[0].owner.user.username);
-      setProfileImage(String(tokens[0].owner.profile_img_url));
+      setDisplayName(tokens[0].owner?.user?.username);
 
       tokens = tokens.map(token => {
+        if(!token.metadata) {
+          // Skip invalid tokens
+          return null;
+        }
         return {
-          name: token.name,
-          imageUrl: token.image_url,
-          collection: token.collection.name,
-          id: token.token_id,
+          name: token.metadata.name,
+          description: token.metadata.description,
+          imageUrl: token.metadata.image,
+          collection: token.collection?.name,
+          id: token.tokenId,
         }
       });
+      tokens = tokens.filter(n => n);
 
       setTokens(tokens);
     }

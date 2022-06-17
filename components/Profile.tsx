@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import styles from '../styles/modules/profile.module.css';
+import MetaLogo from '../public/mm.png';
 
 export interface ProfileProps {
   displayName: string;
@@ -20,9 +21,7 @@ const Profile = ({ displayName, imageUrl, className, onClick }: ProfileProps) =>
     >
       <div className={styles.profile__info}>
         <p>{displayName}</p>
-        {imageUrl && (
-          <img className={styles.profile__img} src={imageUrl} alt="" />
-        )}
+          <img className={styles.profile__img} src={MetaLogo.src} alt="" />
       </div>
       <div className={styles.profile__disconnect}>Disconnect Wallet</div>
     </div>
