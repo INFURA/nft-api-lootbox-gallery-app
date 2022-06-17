@@ -22,7 +22,6 @@ const App = () => {
     walletConnected,
     profileImage,
   } = useWallet(() => {
-    console.debug(`showing gallery`)
     setWalletConnected(true);
     setTimeout(() => {
       setShowGallery(true);
